@@ -15,8 +15,8 @@ const User = () => {
                 ?
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-                {new Array(4).fill().map((v) => (
-                    <div className="card__depart" key={v}>
+                {new Array(4).fill().map((v, i) => (
+                    <div className="card__depart" key={i}>
                         <p>Départs confirmés</p>
                     </div>
                 ))}
@@ -27,8 +27,8 @@ const User = () => {
                     <span className="text-gray-600">recommandation</span>
                 </h1>
                 <div className="flex gap-4 flex-wrap justify-center">
-                    {new Array(10).fill().map((v) => (
-                        <div className="card__travel" key={v}>
+                    {new Array(10).fill().map((v, i) => (
+                        <div className="card__travel" key={i}>
                             Italie
                         </div>
                     ))}
