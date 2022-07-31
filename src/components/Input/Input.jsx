@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import '@scss/home.scss';
 const Input = ({ register, name, errors, type, title, ...rest }) => {
     if (register) {
         return (
@@ -11,7 +11,7 @@ const Input = ({ register, name, errors, type, title, ...rest }) => {
                     type={type}
                 />
                 {errors && errors[name]?.message && (
-                    <p className="text-red-100">{errors[name]?.message}</p>
+                    <p className="home__errors">{errors[name]?.message}</p>
                 )}
             </div>
         );
