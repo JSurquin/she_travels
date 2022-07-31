@@ -1,9 +1,7 @@
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useContext } from 'react';
-import { loginSchema } from '@src/validation';
-import Button from '@components/Button/Button';
+import Form from '@components/Form/Form';
 import Input from '@components/Input/Input';
+import { loginSchema } from '@src/validation';
+import { useState } from 'react';
 import '@scss/home.scss';
 import { AuthContext } from '@contexts/auth';
 import User from '../User/User';
@@ -11,23 +9,9 @@ import User from '../User/User';
 const Home = () => {
     let auth = useContext(AuthContext);
 
-    const {
-        register,
-        handleSubmit,
-        reset,
-        getValues,
-        formState: { errors, isValid, isSubmitted },
-    } = useForm({
-        mode: 'onChange',
-        resolver: yupResolver(loginSchema),
-    });
-
     const onSubmit = (data) =>
         setTimeout(() => {
             auth.setName(data.email);
-            reset({
-                ...getValues(),
-            });
             auth.setLogin(true);
         }, 2000);
 
@@ -40,31 +24,27 @@ const Home = () => {
                         reconnaitre !
                     </p>
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="home__form">
-                        <div className="home__form__content">
-                            <Input register={register} name="email" />
-                            <Button
-                                type="submit"
-                                isValid={isValid}
-                                isSubmitted={isSubmitted}
-                            >
-                                Hello
-                            </Button>
-                        </div>
-                        <div>
-                            {errors.email?.message && (
-                                <span className="home__errors">
-                                    {errors.email?.message}
-                                </span>
-                            )}
-                        </div>
-                    </div>
-                </form>
+                <Form
+                    onSubmit={onSubmit}
+                    validationSchema={loginSchema}
+                    submitMessage="Hello"
+                >
+                    <Input name="email" />
+                </Form>
+                {auth.name && (
+                    <p>
+                        Bonjour{' '}
+                        <span className="home__notice">
+                            {' '}
+                            {auth.name.replace(/@.*$/, '')}
+                        </span>
+                    </p>
+                )}
             </div>
         );
     } else if (auth.login) {
         return <User />;
     }
 };
+
 export default Home;
