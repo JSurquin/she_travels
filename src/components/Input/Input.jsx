@@ -1,9 +1,5 @@
 import PropTypes from 'prop-types';
 
-const styles = {
-    color: 'red',
-};
-
 const Input = ({ register, name, errors, type, title, ...rest }) => {
     if (register) {
         return (
@@ -15,7 +11,7 @@ const Input = ({ register, name, errors, type, title, ...rest }) => {
                     type={type}
                 />
                 {errors && errors[name]?.message && (
-                    <p style={styles}>{errors[name]?.message}</p>
+                    <p className="text-red-100">{errors[name]?.message}</p>
                 )}
             </div>
         );

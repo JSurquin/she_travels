@@ -1,0 +1,20 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.navbar {
+  @apply flex absolute z-10 text-white font-bold w-full justify-between items-center;
+  height: 65px;
+}
+
+.header {
+  @apply flex relative flex-col justify-center text-white font-bold bg-center bg-cover;
+  height: 400px;
+  background-image: url(https://cdv-prod.imgix.net/header-background/59f01ebe-0e7a-4579-899a-08359be4c980.jpg?q=100&w=2000&dpr=1&fit=crop&auto=format%2Ccompress);
+}
+
+.header-overlay {
+  @apply absolute top-0 left-0 right-0 bottom-0;
+  background: linear-gradient(-180deg,rgba(255,82,82,.52),#ff5252);
+  opacity: 0.73;
+}
