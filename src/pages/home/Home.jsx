@@ -1,9 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
-import { loginSchema } from '../../validation';
+import { loginSchema } from '@src/validation';
 import Button from '@components/Button/Button';
 import Input from '@components/Input/Input';
+import '@scss/home.scss';
 
 const Home = () => {
     const [data, setData] = useState();
@@ -18,20 +19,6 @@ const Home = () => {
         resolver: yupResolver(loginSchema),
     });
 
-    const styles = {
-        color: 'red',
-        display: 'flex',
-    };
-
-    const formStyle = {
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100vh',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
-    };
-
     const onSubmit = (data) =>
         setTimeout(() => {
             setData(data.email);
@@ -41,14 +28,14 @@ const Home = () => {
         }, 2000);
 
     return (
-        <div style={formStyle}>
+        <div className="home__content">
             <div>
                 <p>
                     Entrez votre email pour que nous puissons vous reconnaitre !
                 </p>
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div style={styles}>
+                <div className="home__form">
                     <Input register={register} name="email" />
                     <Button
                         type="submit"
@@ -59,12 +46,14 @@ const Home = () => {
                     </Button>
                 </div>
                 {errors.email?.message && (
-                    <span style={styles}>{errors.email?.message}</span>
+                    <span className="home__errors">
+                        {errors.email?.message}
+                    </span>
                 )}
                 {data && (
                     <p>
                         Welcome back{' '}
-                        <span style={{ fontWeight: 'bold' }}>
+                        <span className="home__notice">
                             {data?.replace(/@.*$/, '')}
                         </span>
                     </p>
