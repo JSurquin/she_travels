@@ -1,8 +1,8 @@
 import Form from '@components/Form/Form';
 import Input from '@components/Input/Input';
 import { loginSchema } from '@src/validation';
-import { useState } from 'react';
 import '@scss/home.scss';
+import { useContext } from 'react';
 import { AuthContext } from '@contexts/auth';
 import User from '../User/User';
 
