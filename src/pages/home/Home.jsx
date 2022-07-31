@@ -63,7 +63,7 @@ const Home = () => {
                 )}
                 {data && (
                     <p>
-                        Welcome back
+                        Welcome back{' '}
                         <span style={{ fontWeight: 'bold' }}>
                             {data?.replace(/@.*$/, '')}
                         </span>

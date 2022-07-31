@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const styles = {
     color: 'red',
-}
+};
 
 const Input = ({ register, name, errors, type, title, ...rest }) => {
     if (register) {
@@ -18,9 +18,9 @@ const Input = ({ register, name, errors, type, title, ...rest }) => {
                     <p style={styles}>{errors[name]?.message}</p>
                 )}
             </div>
-        )
+        );
     }
-}
+};
 
 Input.propTypes = {
     register: PropTypes.func,
@@ -28,6 +28,6 @@ Input.propTypes = {
     errors: PropTypes.object,
     type: PropTypes.string,
     title: PropTypes.string,
-}
+};
 
-export default Input
+export default Input;

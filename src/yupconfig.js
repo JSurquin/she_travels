@@ -1,4 +1,4 @@
-import * as yup from 'yup'
+import * as yup from 'yup';
 
 yup.setLocale({
     mixed: {
@@ -6,11 +6,11 @@ yup.setLocale({
         notType: function notType(_ref) {
             switch (_ref.type) {
                 case 'number':
-                    return 'Veuillez mettre un nombre'
+                    return 'Veuillez mettre un nombre';
                 case 'string':
-                    return 'Veuillez mettre une chaine de caractère'
+                    return 'Veuillez mettre une chaine de caractère';
                 default:
-                    return 'Veuillez mettre le bon type'
+                    return 'Veuillez mettre le bon type';
             }
         },
     },
@@ -21,6 +21,6 @@ yup.setLocale({
         typeError: 'you must specify a number',
         required: 'un nombre est requis',
     },
-})
+});
 
-export default yup
+export default yup;
