@@ -1,12 +1,54 @@
-# Getting Started with Create React App
+# She Travels - Demo app - React Hook form
+
+## English version
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Branches
+The sample is on :
+**main**
+
+<img width="1440" alt="Capture d’écran 2022-08-01 à 08 05 50" src="https://user-images.githubusercontent.com/33385043/182082859-eeb2d646-5fce-44c9-b749-ee545acd60de.png">
+
+The more complex sample is on :
+**features/custom-form**
+
+<img width="1440" alt="Capture d’écran 2022-08-01 à 08 05 50" src="https://user-images.githubusercontent.com/33385043/182082873-7773a5b1-048e-446d-8d40-b3f60ae74c92.png">
+
+But i have make design on 2 branches :
+**	features/main-with-style
+	features/custom-form-with-style
+**
+
+<img width="1439" alt="Capture d’écran 2022-08-01 à 08 06 27" src="https://user-images.githubusercontent.com/33385043/182082944-15526e17-d9a1-4a89-baea-2645481837af.png">
+
+**Just switch between branches, npm i every switch , and restart the server**
+## Packages use : 
+
+**on main : **
+
+1. react-hook-form 📝
+2. yup ✍️
+3. hookform/resolvers 📝
+4. prettier 🫧
+5. eslint (with .eslintrc.json) 📖
+6. craco config with aliases (webpack aliases) ⚙️
+11. sass 👨‍💻
+
+**on branches with suffix "with-style"**
+1. tailwind 💅
+2. autoprefixer 💅
+3. postcss 💅
+4. postcss-import 💅
+
+## Git Methodology
+Conventional commit : [Conventional commit](https://www.conventionalcommits.org/en/v1.0.0/ "Conventional commit")
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start with craco`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,12 +56,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+### `npm run build with craco`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,42 +66,61 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# French version
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Le projet a été créer avec [Create React App](https://github.com/facebook/create-react-app).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Branches
+La démo basique est sur la branche : 
+**main**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Une démo plus complexe avec un custom form est sur la branche : 
+**features/custom-form**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Un ajout avec redirection et design lors du submit du form sur ces deux branches : 
+**	features/main-with-style
+	features/custom-form-with-style
+**
 
-## Learn More
+***Il faut juste changer de branche, refaire un npm i et red**
+## Paquets utilisées : 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**sur main : **
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. react-hook-form 📝
+2. yup ✍️
+3. hookform/resolvers 📝
+4. prettier 🫧
+5. eslint (with .eslintrc.json) 📖
+6. craco config with aliases (webpack aliases) ⚙️
+11. sass 👨‍💻
 
-### Code Splitting
+**sur les branches avec le suffixe "with-style"**
+1. tailwind 💅
+2. autoprefixer 💅
+3. postcss 💅
+4. postcss-import 💅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Méthodologie git
+utilisation du conventional commit : [Conventional commit](https://www.conventionalcommits.org/en/v1.0.0/ "Conventional commit")
 
-### Analyzing the Bundle Size
+## Les scripts disponible
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Dans la racine du projet vous pouvez lancer
 
-### Making a Progressive Web App
+### `npm start with craco`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Lancer application en mode développement
+Ouvrir [http://localhost:3000](http://localhost:3000) pour le voir dans le navigateur.
 
-### Advanced Configuration
+La page se recharge à chaque changement.
+Vous pouvez voir les erreurs lint dans le terminal si il y en a.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### `npm run build with craco`
 
-### Deployment
+Lancer application en mode production dans le dossier `build`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+L'application est prête a être deployée !
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
